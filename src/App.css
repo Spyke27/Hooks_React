@@ -1,41 +1,53 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.App{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.perfil{
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  align-items: center;
+  justify-content: center;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1{
+  font-size: 52px;
+  color: #111;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2{
+  width: 100%;
+  font-size: 32px;
+  color: #222;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.avatar{
+  background-color: #111;
 }
-
-.card {
-  padding: 2em;
+.seguidores{
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
 }
-
-.read-the-docs {
-  color: #888;
+.followers{
+  display: flex;
+  flex-direction: column;
+}
+.followers button{
+  border: none;
+  background-color: #ccc;
+  color: #111;
+  padding: 5px 12px;
+}
+.following{
+  display: flex;
+  flex-direction: column;
+}
+.following button{
+  border: none;
+  background-color: #ccc;
+  color: #111;
+  padding: 5px 12px;
 }
