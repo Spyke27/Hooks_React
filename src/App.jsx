@@ -6,7 +6,7 @@ function App() {
   const [user, setUser] = useState()
   
   useEffect(() =>{
-    fetch("https://api.github.com/users/Spyke27")
+    fetch("https://api.github.com/users/athosfranco")
     .then((res) => res.json())
     .then((json)=> setUser(json));
   }, [])
@@ -21,6 +21,8 @@ function App() {
         <div className='perfil'>
         
         <div className='avatar'><img src={user.avatar_url} alt="Foto Perfil" /></div>
+        
+        <div>
         <h1>{user.name}</h1>
         <h2>{user.bio}</h2>
 
@@ -33,6 +35,7 @@ function App() {
          <p>seguindo</p>
           <button>{user.following}</button>
          </div>
+        </div>
         </div>
 
       </div>

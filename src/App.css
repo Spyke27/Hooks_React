@@ -1,35 +1,42 @@
 * {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 .App{
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  background-color: #171717;
 }
 .perfil{
   display: flex;
-  flex-direction: column;
   width: 1200px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 h1{
   font-size: 52px;
-  color: #111;
+  color: #e3e3e3;
 }
 h2{
   width: 100%;
   font-size: 32px;
-  color: #222;
+  color: #8d8d8d;
+  margin-bottom: 20px
 }
 .avatar{
-  background-color: #111;
+  background-color: #ccc;
 }
 .seguidores{
   display: flex;
   justify-content: space-between;
   gap: 50px;
+  color: #e3e3e3;
+}
+.seguidores p{
+  margin-bottom: 10px;
 }
 .followers{
   display: flex;
@@ -37,8 +44,8 @@ h2{
 }
 .followers button{
   border: none;
-  background-color: #ccc;
-  color: #111;
+  background-color: #111;
+  color: #ccc;
   padding: 5px 12px;
 }
 .following{
@@ -47,7 +54,7 @@ h2{
 }
 .following button{
   border: none;
-  background-color: #ccc;
-  color: #111;
+  background-color: #111;
+  color: #ccc;
   padding: 5px 12px;
 }
