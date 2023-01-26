@@ -5,13 +5,14 @@
 }
 .App{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   background-color: #171717;
 }
 .perfil{
-  display: flex;
+  display: none;
   width: 1200px;
   align-items: center;
   justify-content: space-around;
@@ -31,7 +32,7 @@ h2{
 }
 .seguidores{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 50px;
   color: #e3e3e3;
 }
@@ -46,7 +47,8 @@ h2{
   border: none;
   background-color: #111;
   color: #ccc;
-  padding: 5px 12px;
+  padding: 5px 32px;
+  font-size: 21px;
 }
 .following{
   display: flex;
@@ -56,5 +58,40 @@ h2{
   border: none;
   background-color: #111;
   color: #ccc;
-  padding: 5px 12px;
+  padding: 5px 32px;
+  font-size: 21px;
+}
+.form{
+  background-color: #222;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 5px;
+}
+.form h3{
+  font-size: 32px;
+  color: #e3e3e3;
+  margin-bottom: 20px;
+}
+label{
+  color: #e3e3e3;
+  font-size: 20px;
+}
+input{
+  width: 250px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: start;
+  padding-left: 10px;
+}
+.form button{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(2, 104, 2);
+  color: #e3e3e3;
+  margin-top: 10px;
+  cursor: pointer;
 }

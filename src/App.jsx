@@ -4,22 +4,36 @@ import './App.css'
 
 function App() {
   const [user, setUser] = useState()
+  const [name, setName] = useState()
+
+
   
   useEffect(() =>{
-    fetch("https://api.github.com/users/athosfranco")
+    fetch(`https://api.github.com/users/${name}`)
     .then((res) => res.json())
     .then((json)=> setUser(json));
-  }, [])
+  }, [name])
 
+  const pesquisar = () => {
+    const perfil = document.querySelector(".perfil")
+    const form = document.querySelector(".form")
 
+    perfil.style.display = "flex";
+    form.style.display = "none";
+  }
 
   return (
     <div className="App">
+      
+      <div className='form'>
+      <h3>Github</h3>
+      <label htmlFor="name">Nome de Usuário: </label>
+      <input placeholder='Digite seu nome de usuario' type="text" value={name} onChange={(e)=> setName(e.target.value)} />
+      <button onClick={pesquisar}>Pesquisar</button>
+      </div>
 
       {user && (
-        
         <div className='perfil'>
-        
         <div className='avatar'><img src={user.avatar_url} alt="Foto Perfil" /></div>
         
         <div>
@@ -28,18 +42,17 @@ function App() {
 
         <div className='seguidores'>
          <div className='followers'>
-         <p>seguidores</p>
+         <p>Followers</p>
           <button>{user.followers}</button>
          </div>
          <div className='following'>
-         <p>seguindo</p>
+         <p>Following</p>
           <button>{user.following}</button>
          </div>
         </div>
         </div>
 
       </div>
-        
       )}
     </div>
   )
